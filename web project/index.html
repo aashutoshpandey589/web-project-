@@ -1,0 +1,2937 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>For RIYUUU ❤️</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#08050a;
+    color:#fff;
+    font-family:Georgia,serif;
+    overflow-x:hidden;
+}
+
+/* =========================
+   BACKGROUND
+========================= */
+
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    background:
+        radial-gradient(circle at 20% 20%,rgba(255,50,120,.13),transparent 30%),
+        radial-gradient(circle at 80% 70%,rgba(180,30,100,.12),transparent 30%);
+    z-index:-3;
+}
+
+body::after{
+    content:"";
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    opacity:.08;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.5'/%3E%3C/svg%3E");
+    z-index:-2;
+}
+
+/* =========================
+   STARS
+========================= */
+
+.stars{
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    z-index:-1;
+}
+
+.star{
+    position:absolute;
+    width:2px;
+    height:2px;
+    background:white;
+    border-radius:50%;
+    opacity:.6;
+    animation:twinkle 3s infinite ease-in-out;
+}
+
+@keyframes twinkle{
+    0%,100%{opacity:.15}
+    50%{opacity:.8}
+}
+
+/* =========================
+   MUSIC CONTROL
+========================= */
+
+.music-control{
+    position:fixed;
+    top:18px;
+    right:18px;
+    width:48px;
+    height:48px;
+    border-radius:50%;
+    border:1px solid rgba(255,255,255,.25);
+    background:rgba(20,10,20,.65);
+    backdrop-filter:blur(12px);
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:20px;
+    cursor:pointer;
+    z-index:1000;
+    transition:.3s;
+    box-shadow:0 0 20px rgba(255,70,150,.15);
+}
+
+.music-control:hover{
+    transform:scale(1.08);
+    background:rgba(255,70,140,.25);
+}
+
+.music-control.playing{
+    box-shadow:0 0 25px rgba(255,80,160,.45);
+}
+
+/* =========================
+   PROGRESS
+========================= */
+
+.progress-container{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:3px;
+    background:rgba(255,255,255,.05);
+    z-index:1001;
+}
+
+.progress{
+    height:100%;
+    width:0%;
+    background:linear-gradient(90deg,#ff4f9a,#ff9acb);
+    transition:.5s;
+}
+
+/* =========================
+   PAGES
+========================= */
+
+.page{
+    min-height:100vh;
+    width:100%;
+    display:none;
+    align-items:center;
+    justify-content:center;
+    padding:80px 20px;
+}
+
+.page.active{
+    display:flex;
+    animation:pageEnter 1.2s ease;
+}
+
+@keyframes pageEnter{
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+.content{
+    width:min(850px,100%);
+    text-align:center;
+}
+
+.eyebrow{
+    color:#ff8dbd;
+    text-transform:uppercase;
+    letter-spacing:4px;
+    font-family:Arial,sans-serif;
+    font-size:12px;
+    margin-bottom:18px;
+}
+
+h1{
+    font-size:clamp(38px,7vw,75px);
+    line-height:1.05;
+    margin-bottom:25px;
+}
+
+h2{
+    font-size:clamp(28px,5vw,48px);
+    margin-bottom:20px;
+}
+
+h3{
+    font-size:23px;
+    margin-bottom:10px;
+}
+
+p{
+    font-family:Arial,sans-serif;
+    line-height:1.8;
+    color:#d9d0d6;
+    font-size:16px;
+}
+
+.highlight{
+    color:#ff9bc7;
+}
+
+button{
+    border:none;
+    padding:14px 25px;
+    margin-top:30px;
+    border-radius:999px;
+    background:rgba(255,80,150,.12);
+    color:#fff;
+    border:1px solid rgba(255,120,180,.35);
+    cursor:pointer;
+    font-size:15px;
+    transition:.3s;
+    backdrop-filter:blur(10px);
+}
+
+button:hover{
+    transform:translateY(-2px);
+    background:rgba(255,80,150,.25);
+    box-shadow:0 10px 30px rgba(255,70,150,.15);
+}
+
+/* =========================
+   OPENING
+========================= */
+
+.opening-heart{
+    font-size:70px;
+    margin-bottom:25px;
+    animation:heartPulse 2s infinite;
+}
+
+@keyframes heartPulse{
+    0%,100%{transform:scale(1)}
+    50%{transform:scale(1.12)}
+}
+
+/* =========================
+   ENVELOPE
+========================= */
+
+.envelope-wrapper{
+    margin:40px auto;
+    width:280px;
+    height:190px;
+    position:relative;
+    cursor:pointer;
+}
+
+.envelope{
+    position:absolute;
+    inset:0;
+    background:#9e365e;
+    border-radius:8px;
+    box-shadow:0 20px 50px rgba(0,0,0,.45);
+}
+
+.envelope::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:#c64c7a;
+    clip-path:polygon(0 0,50% 58%,100% 0);
+    transform-origin:top;
+    transition:1s;
+    z-index:4;
+}
+
+.envelope.open::before{
+    transform:rotateX(180deg);
+}
+
+.envelope::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:
+        linear-gradient(135deg,transparent 49%,rgba(255,255,255,.12) 50%,transparent 51%),
+        linear-gradient(225deg,transparent 49%,rgba(255,255,255,.12) 50%,transparent 51%);
+}
+
+.letter-paper{
+    position:absolute;
+    width:85%;
+    height:150px;
+    background:#fff7f2;
+    color:#57283a;
+    left:7.5%;
+    bottom:15px;
+    padding:25px;
+    z-index:2;
+    transition:1s;
+    box-shadow:0 5px 20px rgba(0,0,0,.3);
+}
+
+.envelope.open .letter-paper{
+    transform:translateY(-90px);
+}
+
+/* =========================
+   MEMORY GRID
+========================= */
+
+.memory-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:22px;
+    margin-top:35px;
+}
+
+.memory-card{
+    background:rgba(255,255,255,.045);
+    border:1px solid rgba(255,255,255,.1);
+    border-radius:18px;
+    overflow:hidden;
+    text-align:left;
+    backdrop-filter:blur(8px);
+    transition:.4s;
+}
+
+.memory-card:hover{
+    transform:translateY(-5px);
+    border-color:rgba(255,120,180,.3);
+}
+
+.memory-card img,
+.memory-card video{
+    width:100%;
+    height:280px;
+    object-fit:cover;
+    display:block;
+}
+
+.memory-description{
+    padding:20px;
+}
+
+.memory-description p{
+    font-size:14px;
+}
+
+/* =========================
+   FULL IMAGE
+========================= */
+
+.full-memory{
+    margin-top:30px;
+}
+
+.full-memory img{
+    width:min(600px,100%);
+    max-height:600px;
+    object-fit:cover;
+    border-radius:20px;
+    box-shadow:0 20px 60px rgba(0,0,0,.45);
+}
+
+/* =========================
+   QUESTIONS
+========================= */
+
+.question-box{
+    margin-top:35px;
+}
+
+.options{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+    margin-top:30px;
+}
+
+.options button{
+    margin:0;
+    border-radius:15px;
+    padding:17px;
+}
+
+.response{
+    margin-top:25px;
+    min-height:35px;
+    color:#ff9bc7;
+    font-style:italic;
+}
+
+/* =========================
+   LETTER
+========================= */
+
+.letter{
+    margin-top:35px;
+    background:#fff8f4;
+    color:#452532;
+    padding:45px;
+    border-radius:5px;
+    text-align:left;
+    box-shadow:0 25px 70px rgba(0,0,0,.4);
+    position:relative;
+}
+
+.letter::before{
+    content:"";
+    position:absolute;
+    inset:12px;
+    border:1px solid rgba(110,50,70,.25);
+    pointer-events:none;
+}
+
+.letter p{
+    color:#54333f;
+    margin-bottom:20px;
+    font-family:Georgia,serif;
+}
+
+.signature{
+    text-align:right;
+    font-size:22px;
+    margin-top:30px;
+    color:#8c3158;
+}
+
+/* =========================
+   FINAL HEART
+========================= */
+
+.final-heart{
+    font-size:100px;
+    animation:heartPulse 1.7s infinite;
+}
+
+/* =========================
+   FLOATING HEARTS
+========================= */
+
+.floating-heart{
+    position:fixed;
+    bottom:-30px;
+    font-size:20px;
+    pointer-events:none;
+    animation:floatHeart 5s linear forwards;
+    z-index:999;
+}
+
+@keyframes floatHeart{
+    0%{
+        transform:translateY(0) rotate(0deg);
+        opacity:0;
+    }
+    15%{
+        opacity:1;
+    }
+    100%{
+        transform:translateY(-110vh) rotate(360deg);
+        opacity:0;
+    }
+}
+
+/* =========================
+   FERRIS WHEEL FINAL PAGE
+========================= */
+
+.final-wheel-page{
+    min-height:100vh;
+    overflow:hidden;
+}
+
+.wheel-scene{
+    position:relative;
+    width:min(720px,100%);
+    height:720px;
+    margin:10px auto 0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.wheel-glow{
+    position:absolute;
+    width:520px;
+    height:520px;
+    border-radius:50%;
+    background:radial-gradient(
+        circle,
+        rgba(255,80,150,.18),
+        rgba(255,80,150,.05) 45%,
+        transparent 70%
+    );
+    filter:blur(12px);
+}
+
+.wheel{
+    position:relative;
+    width:500px;
+    height:500px;
+    border:2px solid rgba(255,190,220,.38);
+    border-radius:50%;
+    animation:wheelRotate 55s linear infinite;
+    box-shadow:
+        0 0 30px rgba(255,100,170,.12),
+        inset 0 0 30px rgba(255,100,170,.08);
+}
+
+/*
+   The photos counter-rotate so they remain upright
+   while the Ferris wheel rotates.
+*/
+
+.photo-cabin{
+    position:absolute;
+    width:115px;
+    height:145px;
+    left:50%;
+    top:50%;
+    margin-left:-57.5px;
+    margin-top:-72.5px;
+    transform-origin:57.5px 322px;
+}
+
+.photo-cabin-inner{
+    width:100%;
+    height:100%;
+    animation:counterRotate 55s linear infinite;
+}
+
+.photo-cabin img{
+    width:100%;
+    height:115px;
+    object-fit:cover;
+    border-radius:14px;
+    border:3px solid rgba(255,255,255,.8);
+    box-shadow:0 8px 25px rgba(0,0,0,.45);
+}
+
+.cabin-label{
+    margin-top:6px;
+    font-family:Arial,sans-serif;
+    font-size:10px;
+    color:#ffd4e5;
+    text-align:center;
+}
+
+@keyframes wheelRotate{
+    from{transform:rotate(0deg)}
+    to{transform:rotate(360deg)}
+}
+
+@keyframes counterRotate{
+    from{transform:rotate(0deg)}
+    to{transform:rotate(-360deg)}
+}
+
+/* Wheel spokes */
+
+.spoke{
+    position:absolute;
+    width:2px;
+    height:250px;
+    background:linear-gradient(
+        to bottom,
+        transparent,
+        rgba(255,190,220,.45),
+        transparent
+    );
+    left:50%;
+    top:0;
+    transform-origin:50% 250px;
+}
+
+.wheel-center{
+    position:absolute;
+    width:155px;
+    height:155px;
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%);
+    border-radius:50%;
+    background:rgba(18,7,14,.88);
+    border:1px solid rgba(255,150,200,.35);
+    backdrop-filter:blur(10px);
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    z-index:20;
+    box-shadow:0 0 45px rgba(255,80,160,.2);
+}
+
+.wheel-center .heart{
+    font-size:38px;
+    animation:heartPulse 2s infinite;
+}
+
+.wheel-center strong{
+    margin-top:8px;
+    font-size:17px;
+}
+
+.wheel-center span{
+    font-family:Arial,sans-serif;
+    font-size:10px;
+    color:#d7aabd;
+    margin-top:4px;
+}
+
+/* =========================
+   SYNCHRONIZED LYRICS
+========================= */
+
+.lyric-container{
+    position:fixed;
+    left:50%;
+    bottom:12%;
+    transform:translateX(-50%);
+    width:min(850px,90%);
+    text-align:center;
+    pointer-events:none;
+    z-index:950;
+}
+
+.lyric{
+    display:inline-block;
+    opacity:0;
+    transform:translateY(15px);
+    font-size:clamp(22px,5vw,42px);
+    line-height:1.3;
+    color:#fff;
+    text-shadow:
+        0 3px 20px rgba(0,0,0,.9),
+        0 0 30px rgba(255,100,170,.4);
+    transition:
+        opacity .8s ease,
+        transform .8s ease;
+}
+
+.lyric.visible{
+    opacity:1;
+    transform:translateY(0);
+}
+
+/* =========================
+   EMOTIONAL MUSIC MODE
+========================= */
+
+.emotional-vignette{
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    background:radial-gradient(
+        circle,
+        transparent 35%,
+        rgba(100,0,35,.28)
+    );
+    opacity:0;
+    transition:opacity 2s ease;
+    z-index:900;
+}
+
+.emotional-vignette.active{
+    opacity:1;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:700px){
+
+    .page{
+        padding:75px 15px;
+    }
+
+    .memory-grid{
+        grid-template-columns:1fr;
+    }
+
+    .memory-card img,
+    .memory-card video{
+        height:250px;
+    }
+
+    .letter{
+        padding:30px 22px;
+    }
+
+    .wheel-scene{
+        height:520px;
+        transform:scale(.68);
+        transform-origin:center;
+        margin-top:-60px;
+        margin-bottom:-80px;
+    }
+
+    .wheel{
+        width:500px;
+        height:500px;
+    }
+
+    .lyric-container{
+        bottom:16%;
+    }
+
+    .lyric{
+        font-size:24px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- =========================
+     AUDIO
+========================= -->
+
+<audio id="bgMusic" loop preload="auto">
+    <source src="media/music.mp3" type="audio/mpeg">
+</audio>
+
+<!-- =========================
+     MUSIC BUTTON
+========================= -->
+
+<button
+    class="music-control"
+    id="musicButton"
+    onclick="toggleMusic()"
+    aria-label="Toggle music">
+    ♫
+</button>
+
+<div class="progress-container">
+    <div class="progress" id="progress"></div>
+</div>
+
+<div class="stars" id="stars"></div>
+
+<div class="emotional-vignette" id="emotionalVignette"></div>
+
+<div class="lyric-container">
+    <div class="lyric" id="lyric"></div>
+</div>
+
+
+<!-- ==================================================
+     PAGE 1 — OPENING
+================================================== -->
+
+<section class="page active">
+
+    <div class="content">
+
+        <div class="opening-heart">❤️</div>
+
+        <div class="eyebrow">
+            A little place made only for you
+        </div>
+
+        <h1>
+            For <span class="highlight">RIYUUU</span>
+        </h1>
+
+        <p>
+            There is something I want to tell you.
+            And this time, I want you to read it slowly.
+        </p>
+
+        <button onclick="startStory()">
+            Begin our little story
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- ==================================================
+     PAGE 2 — ENVELOPE
+================================================== -->
+
+<section class="page">
+
+    <div class="content">
+
+        <div class="eyebrow">
+            Before everything else...
+        </div>
+
+        <h2>
+            I wrote you a letter.
+        </h2>
+
+        <div
+            class="envelope-wrapper"
+            onclick="openEnvelope()">
+
+            <div class="envelope" id="envelope">
+
+                <div class="letter-paper">
+                    <strong>
+                        For RIYUUU ❤️
+                    </strong>
+                </div>
+
+            </div>
+
+        </div>
+
+        <button id="envelopeButton" onclick="openEnvelope()">
+            Open the envelope 💌
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- ==================================================
+     PAGE 3 — MEMORIES
+================================================== -->
+
+<section class="page">
+
+    <div class="content">
+
+        <div class="eyebrow">
+            Before the apology...
+        </div>
+
+        <h2>
+            Let's remember us.
+        </h2>
+
+        <p>
+            Before I talk about what went wrong,
+            I want to remember everything that made us us.
+        </p>
+
+        <div class="memory-grid">
+
+            <div class="memory-card">
+                <img src="media/photo1.jpg">
+
+                <div class="memory-description">
+                    <h3>JOURNEY TILL NOW ❤️</h3>
+                    <p>
+                       Riyu from our 1ST freshers, our bond have become so more than just knowing.
+                       we are in relationship now babyyyy....you r my gf and i am your bf .....heeee
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="memory-card">
+                <img src="media/photo2.jpg">
+
+                <div class="memory-description">
+                    <h3>A memory I still smile about</h3>
+                    <p>
+                       I remember the first touching of our hands I touched your waist and your hands wrapped around my hands 🫠🫠
+                       and in holi i touched your cheeks.......i loveeeee that feeling forever and I always smile whenever I remember 
+                       these things.... about our all first experiences..... babygirl you are very special to me...💋💋
+
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="memory-card">
+                <img src="media/photo3.jpg">
+
+                <div class="memory-description">
+                    <h3>That beautiful habit</h3>
+                    <p>
+                       because of you bbygirl i now started fit checks..and that's my fav part also
+                       as i loveee fit checks with you and this habit of fit checks i just loveee it bbyyyyy
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="memory-card">
+                <img src="media/photo4.jpg">
+
+                <div class="memory-description">
+                    <h3>One of our little moments</h3>
+                    <p>
+                        small and cute moments of our life in clg life are just awesome with youu.
+                        i love youuuuuuuuuu ever and ever bbygirl............
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+        <button onclick="nextPage()">
+            Continue ❤️
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- ==================================================
+     PAGE 4 — VIDEOS
+================================================== -->
+
+<section class="page">
+
+    <div class="content">
+
+        <div class="eyebrow">
+            Moving memories
+        </div>
+
+        <h2>
+            Some memories move.
+        </h2>
+
+        <div class="memory-grid">
+
+            <div class="memory-card">
+
+                <video
+                    src="media/video1.mp4"
+                    controls
+                    playsinline>
+                </video>
+
+                <div class="memory-description">
+
+                    <h3>I want to remember just only you my babyy</h3>
+
+                    <p>
+                       I just want you to be happy kuchupuchu 💋💋your sorrows,all your worries
+                        come to me I will handle............. you be happy my bbbbyyyy🫠😘💋😘😘💋🫠
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="memory-card">
+
+                <video
+                    src="media/video2.mp4"
+                    controls
+                    playsinline>
+                </video>
+
+                <div class="memory-description">
+
+                    <h3>Another little piece of us</h3>
+
+                    <p>
+                       Like the song says ,"you deserve me I deserve you".....
+                       In a world of 8.32 billion people I just want you to be my oxygen............ 
+                       only till you i live my life..... that's the wish I have....
+                       my fav. Person and notification ray Mysterio 💋💋🫠🫠🫠🫠🫠💋💘💘❤️💞
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <button onclick="nextPage()">
+            There is something I need to say
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- ==================================================
+     PAGE 5 — WHAT HAPPENED
+================================================== -->
+
+<section class="page emotional-page">
+
+    <div class="content">
+
+        <div class="eyebrow">
+            The part I cannot ignore
+        </div>
+
+        <h2>
+            I'm sorry, RIYUUU.
+        </h2>
+
+        <div class="full-memory">
+
+            <img src="media/photo5.jpg">
+
+        </div>
+
+        <p style="margin-top:30px">
+
+            I know I spoke to you rudely.
+
+            <br><br>
+
+            I know my tone was wrong.
+
+            <br><br>
+
+            And I know that you didn't deserve
+            to be spoken to like that.
+
+        </p>
+
+        <p
+            class="highlight"
+            style="margin-top:25px">
+
+            I am not here to justify it.
+
+        </p>
+
+        <p style="margin-top:15px">
+
+            I am here because I regret it.
+
+        </p>
+
+        <button onclick="nextPage()">
+            Let me ask you something...
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- ==================================================
+     PAGE 6 — QUESTION
+================================================== -->
+
+<section class="page emotional-page">
+
+    <div class="content">
+
+        <div class="eyebrow">
+            I want to understand you
+        </div>
+
+        <h2>
+            RIYUUU, can you forgive me?
+        </h2>
+
+        <p>
+            Not because you have to.
+            Only if your heart eventually feels ready.
+        </p>
+
+        <div class="question-box">
+
+            <div class="options">
+
+                <button onclick="answer(
+                    '❤️ I hope one day you can forgive me.'
+                )">
+                    ❤️ I hope one day you can forgive me.
+                </button>
+
+                <button onclick="answer(
+                    '🫂 I understand if you need time.'
+                )">
+                    🫂 I understand if you need time.
+                </button>
+
+                <button onclick="answer(
+                    '🥺 I just want you to know I am genuinely sorry.'
+                )">
+                    🥺 I just want you to know I'm genuinely sorry.
+                </button>
+
+            </div>
+
+            <div
+                class="response"
+                id="response">
+            </div>
+
+        </div>
+
+        <button onclick="nextPage()">
+            One more thing ❤️
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- ==================================================
+     PAGE 7 — TALK
+================================================== -->
+
+<section class="page emotional-page">
+
+    <div class="content">
+
+        <div class="eyebrow">
+            One more thing
+        </div>
+
+        <h2>
+            Can we continue talking?
+        </h2>
+
+        <p>
+            Even if you're still hurt,
+            I want to be able to listen.
+        </p>
+
+        <div class="options">
+
+            <button onclick="answer2(
+                '❤️ Whenever you are ready, I will listen.'
+            )">
+                ❤️ Whenever you're ready, I'll listen.
+            </button>
+
+            <button onclick="answer2(
+                '🌷 I will give you the space you need.'
+            )">
+                🌷 I'll give you the space you need.
+            </button>
+
+            <button onclick="answer2(
+                '🫂 I do not want silence to become another distance between us.'
+            )">
+                🫂 I don't want silence to become another distance between us.
+            </button>
+
+        </div>
+
+        <div
+            class="response"
+            id="response2">
+        </div>
+
+        <button onclick="nextPage()">
+            My promise
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- ==================================================
+     PAGE 8 — PROMISE
+================================================== -->
+
+<section class="page emotional-page">
+
+    <div class="content">
+
+        <div class="eyebrow">
+            My promise
+        </div>
+
+        <h2>
+            I will not repeat this.
+        </h2>
+
+        <div class="full-memory">
+
+            <img src="media/photo6.jpg">
+
+        </div>
+
+        <p style="margin-top:30px">
+
+            This promise isn't only because
+            I'm afraid of losing you.
+
+            <br><br>
+
+            It's because I understand 
+            that my tone matters.
+
+            <br><br>
+
+            Even when I'm angry.
+
+            <br>
+
+            Even when I'm frustrated.
+
+            <br>
+
+            Even when everything goes wrong.
+
+        </p>
+
+        <p
+            class="highlight"
+            style="margin-top:25px">
+
+            I will not talk to you like this ever again.
+
+        </p>
+
+        <button onclick="nextPage()">
+            There is something else...
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- ==================================================
+     PAGE 9 — BOYFRIEND DAY
+================================================== -->
+
+<section class="page emotional-page">
+
+    <div class="content">
+
+        <div class="eyebrow">
+            Something I still remember
+        </div>
+
+        <h2>
+            Your all gifts / your efforts bbygirl. 🎁
+        </h2>
+
+        <div class="full-memory">
+
+            <img src="media/photo7.jpg">
+
+        </div>
+
+        <p style="margin-top:30px">
+
+             Boyfriend's day gift : It is small and cute  enough to be carried everywhere,
+
+            <br><br>
+
+            long enough to hold your feelings,
+
+            <br><br>
+
+            and big enough to show me your love,
+            your efforts, and the priority you gave me
+            in your life.
+
+             <br><br>
+
+              All gifts that you give me just tells me how imp. i am in your life an how much you love me. 
+              I hope my efforts shows the feeling to you that i feel the same feeling of special in someone's life..
+
+        </p>
+
+        <p class="highlight" style="margin-top:25px">
+
+            It wasn't about how big the gift was.
+
+        </p>
+
+        <p style="margin-top:15px">
+
+            It was about how much of you
+            was inside that little thing BBYGIRL.....
+
+        </p>
+
+        <button onclick="nextPage()">
+            And I need to admit something...
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- ==================================================
+     PAGE 10 — EFFORT
+================================================== -->
+
+<section class="page emotional-page">
+
+    <div class="content">
+
+        <div class="eyebrow">
+            Something I need to admit
+        </div>
+
+        <h2>
+            Your efforts are much more than mine.I Know you Won't Admit But I Know...
+        </h2>
+
+        <div class="full-memory">
+
+            <img src="media/photo8.jpg">
+
+        </div>
+
+        <p style="margin-top:30px">
+
+            The little things.
+
+            <br><br>
+
+            The care.
+
+            <br><br>
+
+            The gifts.
+
+            <br><br>
+
+            The time.
+
+            <br><br>
+
+            The way you remember things.
+
+            <br><br>
+
+            The way you make me feel important.
+
+            <br><br>
+
+            The way you love me.
+
+            <br><br>
+            
+            The way you brings me food and feed me.
+
+            <br><br>
+
+            The way you take care of me.
+            
+            <br><br>
+
+
+        </p>
+
+        <p
+            class="highlight"
+            style="margin-top:25px">
+
+            You have given me so much more effort
+            than I have ever  given you.
+
+        </p>
+
+        <button onclick="nextPage()">
+            I wrote this for you ❤️
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- ==================================================
+     PAGE 11 — LONG LETTER
+================================================== -->
+
+<section class="page emotional-page">
+
+    <div class="content">
+
+        <div class="eyebrow">
+            A letter from Ashiii
+        </div>
+
+        <h2>
+            To My RIYUUU ❤️
+        </h2>
+
+        <div class="letter">
+
+            <p>
+               MY DEAR RIYUUU ❤️,
+            </p>
+             Dear Riyuuu ❤️ ,
+             </p>
+
+Aaj main tumhe koi normal message nahi likh raha hoon. Aaj main tumhe apne dil ki woh saari baatein likhna chahta hoon jo shayad main tumhare saamne properly bol nahi paata.
+
+Riyuuuu, sabse pehle…
+
+I am genuinely, deeply, honestly sorry.
+ </p>
+
+Sorry isliye kyunki meri wajah se tum hurt hui.
+ </p>
+Meri tone ki wajah se.
+ </p>
+Mere words ki wajah se.
+ </p>
+Mere behaviour ki wajah se. 
+ </p>
+Meri immaturity ki wajah se.
+ </p>
+Meri tumhari feelings ko us moment par properly samajh na paane ki wajah se.
+ </p>
+Aur sabse zyada sorry isliye…
+
+kyunki tumne mujhe baar-baar kha, aur main phir bhi wahi mistakes repeat karta raha.
+ </p>
+Main tumse har baar kehta hoon,
+ </p>
+"I will learn." 
+ </p>
+"I will understand."
+ </p>
+"I won't repeat this."
+ </p>
+"Next time I will handle it better."
+ </p>
+
+Lekin Riyuuuu, agar mere actions baar-baar wahi prove kar rahe hain ki main actually change nahi kar raha, toh sirf ye words bolne ka kya fayda?
+
+Mujhe ye baat accept karni hai.
+
+Meri intention shayad tumhe hurt karne ki kabhi nahi hoti, but my intention doesn't erase the hurt I cause.
+
+Kabhi-kabhi main apni situation, apna mood, apni frustration itna important bana deta hoon ki us moment mein mujhe ye yaad hi nahi rehta ki saamne tum ho.
+
+Tum.
+ </p>
+ jo mere liye itna kuch karti hai.
+ </p>
+ jo meri chhoti-chhoti cheezein notice karti hai.
+ </p>
+ jo mere mood ko samajhne ki koshish karti hai.
+ </p>
+ jo meri problems ko apni problems ki tarah treat karti hai.
+ </p>
+ jo mere liye time nikalti hai.
+ </p>
+ jo mujhe care karti hai, mujhe samjhati hai, mujhe motivate karti hai, mere liye efforts karti hai.
+ </p>
+Aur main?
+ </p>
+Main kabhi-kabhi tumhe woh basic cheez bhi nahi de pata jo tum deserve karti ho—
+
+my time, my patience, my understanding, and my softness.
+
+Aur mujhe is baat ka genuinely guilt hai.
+
+Tum mere liye itni saari cheezein karti ho, itne efforts karti ho, mujhe special feel karwati ho…
+
+Aur m kabhi-kabhi tumhe aisa feel kara deta hoon jaise tum important nahi ho meri life m .
+
+Tum bas apne boyfriend se thoda sa time chahti ho.
+ </p>
+Thodi attention.
+ </p>
+Thoda understanding.
+ </p>
+Thoda pyaar.
+ </p>
+Aur sabse important respectful communication.
+ </p>
+Aur mujhe ye sab tumhe naturally dena chahiye.
+
+Riu, mujhe ye bhi realize hua hai ki mere andar ek problem hai.
+
+Main mistake hone ke baad realize karta hoon.
+
+Main sorry bolta hoon.
+
+M promise karta hoon ki ab nahi hoga.
+
+Aur phir kuch time baad, kisi aur situation mein, main phir wahi immature reaction de deta hoon.
+ </p>
+Kabhi rude tone.
+ </p>
+Kabhi unnecessary irritation.
+ </p>
+Kabhi tumhari baat properly na sunna.
+ </p>
+Kabhi tumhe enough time na dena.
+ </p>
+Kabhi tumhari feelings ko us waqt understand na kar paana.
+ </p>
+Aur phir jab tum hurt hoti ho, tab mujhe samajh aata hai ki maine kya kar diya.
+ </p>
+But by then, damage ho chuka hota hai.
+
+Aur I know…
+
+Tum sirf meri apology nahi chahti.
+
+Tum change chahti ho.
+
+Tum chahti ho ki main tumhari baat samjhun before hurting you, not after.
+
+Tum chahti ho ki agar koi problem ho toh main tumhare against nahi, tumhare saath khada rahun.
+
+Aur honestly Riyuuuu…
+
+You deserve that version of me.
+
+Tum mere worst behaviour ki wajah se sad hone ke liye nahi bani ho.
+
+Tum toh woh ladki ho jo khud itni beautiful, caring aur brave hai.
+
+Tumhe smile karna chahiye.
+
+Tumhe khush rehna chahiye.
+
+Tumhe loved feel karna chahiye.
+
+Tumhe safe feel karna chahiye.
+
+Aur mujhe sabse zyada hurt ye soch kar hota hai ki kabhi-kabhi meri wajah se woh beautiful, happy girl sad ho jaati hai.
+
+Kabhi meri wajah se tum roti ho mujhe bhut jayada regret h us baat ka ...
+
+Aur Riyuu...I don't want to be the reason behind your tears.
+
+Main tumhari life mein woh person banna chahta hoon jiske paas aakar tumhe peace mile.
+
+Not someone whose words make you question your worth.Not someone whose tone makes you feel unwanted.
+
+You are important.You are extremely important to me.
+
+Bas problem ye hai ki main har baar apne actions se ye properly prove nahi kar pata.
+
+Aur main ye excuse nahi banana chahta ki "main aisa hoon hi".
+
+Nahi.
+
+Agar mera behaviour galat hai, toh mujhe usse change karna padega.
+
+Agar main tumhari feelings immediately understand nahi kar pata, toh mujhe tumhe aur patiently sunna hoga.
+
+Tum meri girlfriend ho ..Tum meri responsibility nahi ho…
+
+But your heart is something I should handle carefully.Aur mujhe ye samajhna hai.Tumhara patience unlimited nahi hai.
+
+Tum baar-baar hurt hoke bhi har baar same way se smile nahi kar sakti.
+
+Tum bhi tired hoti ho.
+
+Tumhari bhi feelings hain.
+
+Tum bhi expect karti ho.
+
+Tum bhi deserve karti ho ki koi tumhe samjhe.
+
+Aur mujhe woh person banna hai.
+
+Sirf bolne mein nahi.
+
+Actions mein.
+
+Mujhe tumhe ye prove karna hai ki main sirf sorry bolne wala boyfriend nahi hoon.
+
+Main woh boyfriend banna chahta hoon jo apni mistakes se actually seekhta hai.
+ </p>
+Jo tumhari baat sunta hai.
+ </p>
+Jo gusse mein apni tone control karta hai.
+ </p>
+Jo argument ko ego battle nahi banata.
+ </p>
+Jo tumhe time deta hai.
+ </p>
+Jo tumhari efforts ko notice karta hai.
+ </p>
+Jo tumhare efforts ko kabhi taken for granted nahi leta.
+ </p>
+Riyuu, tumne mere liye jo kuch kiya hai, shayad main uska aadha bhi properly appreciate nahi kar paaya.
+ </p>
+Tumne mujhe care di. Love diya. Time diya. Efforts diye. Mujhe special feel karaya. Meri chhoti-chhoti cheezon ka dhyaan rakha.
+
+Mere liye socha.
+
+Mere liye cheezein ki.
+
+Aur main kabhi-kabhi ye sab itna normal samajhne lagta hoon jaise ye sab automatically milna hi hai.
+
+But it isn't.
+
+It is your choice.
+ </p>
+Every effort you make for me is a choice.
+ </p>
+Every time you give me your time is a choice.
+ </p>
+Every time you care for me is a choice.
+ </p>
+And I should be grateful for every single one of those choices.
+ </p>
+Tumne mujhe jo Boyfriend Day ka gift diya tha…
+ </p>
+Maybe kisi aur ke liye woh ek small gift ho.
+ </p>
+But mere liye woh sirf ek gift nahi tha.
+ </p>
+Usme tumhara effort tha.
+ </p>
+Tumhari thinking thi.
+ </p>
+Tumhara time tha.
+ </p>
+Tumhari feelings thi.
+ </p>
+Tumhara love tha.
+ </p>
+Aur mujhe usse sirf ek object ki tarah nahi dekhna.
+ </p>
+Mujhe usmein tumhari feelings dekhni chahiye H.
+ </p>
+Tumne mere liye jo effort kiya, woh mere liye kisi expensive gift se zyada valuable hai.
+ </p>
+Aur honestly…
+
+Tumhare efforts mere efforts se kahin zyada rahe hain.
+
+Maine bahut kuch karne ka socha hai.
+
+Lekin tumne bahut kuch actually kiya hai.
+
+Aur ye difference mujhe accept karna hai.
+
+Main tumhe ye nahi kehna chahta ki "main perfect ban jaunga."
+
+Because I won't.
+
+Main human hoon.
+
+Mujhse mistakes hongi.
+
+Kabhi mood kharab hoga.
+
+Kabhi disagreement hoga.
+
+Kabhi hum dono ki opinions different hongi.
+
+But what I can promise is—
+
+Main gusse mein tumse rude tone mein baat nhi krumga bbygirl.
+
+Main tumhe hurt karke baad mein sirf sorry bolke matter close nahi karunga.
+
+Main pehle hi sochunga ki mere words tum par kya effect karenge.
+
+Main tumhari baat beech mein ignore nahi karunga.
+
+Main tumhe time dene ko burden nahi samjhunga.
+
+Aur sabse important…
+
+Main tumhe baar-baar same mistake se hurt nahi karna chahta.
+
+I know I have said these things before.
+
+And maybe isi wajah se tumhe mere words par trust karna difficult ho.
+
+And honestly? I understand.
+
+Agar main tumhari jagah hota, toh shayad mujhe bhi sirf words par trust karna difficult hota.
+
+Isliye iss baar main tumse ye nahi keh raha hu ki "Believe me because I promise."
+
+Main keh raha hoon ki Give me the opportunity to show you.
+ </p>
+Let my actions speak.
+ </p>
+Let my patience speak.
+ </p>
+Let my behaviour speak.
+ </p>
+Let the way I treat you speak.
+ </p>
+Main tumhe convince nahi karna chahta ki main good boyfriend hoon.
+
+Main good boyfriend ban kar tumhe feel karwana chahta hoon.
+
+Agar kabhi future mein koi problem aaye, agar life difficult ho, agar hum dono ke beech disagreement ho…
+
+I want to remember one thing:
+ </p>
+"It is never me vs you,It is always us vs the problem".
+ </p>
+Mujhe tumhare saath rehna hai.
+ </p>
+Mujhe argument win nahi karna.
+ </p>
+Mujhe apna ego protect nahi karna.
+ </p>
+Mujhe tumhara heart protect karna hai.
+ </p>
+Because love without respect doesn't feel like love.
+ </p>
+And I want you to feel loved by me Har ek din.
+
+sorry YRR har us baar ke liye jab mere words tumhare liye jitne soft hone chahiye the, usse zyada harsh ho gaye.
+
+Aur sabse zyada sorry mujhe is baat ka hai ki jis insaan ko main sabse zyada pyaar karta hoon, meri wajah se usi ko hurt hona pada… jabki main hamesha chahta tha ki tum mere saath loved aur happy feel karo.
+
+I am sorry for every tear that came because of me.
+
+And I am especially sorry for making someone as precious as you feel hurt by the person who is supposed to make her feel safest.
+
+I cannot change yesterday. I cannot erase the things I have already said.
+
+I cannot go back and stop myself from making every mistake.
+
+I want to learn.
+
+Not just say that I will learn.
+
+I want to actually learn.
+
+I want to become more patient.
+
+More understanding.
+
+More present.
+
+More expressive.
+
+More caring.
+
+More responsible with your feelings.
+
+And I want to become a better version of myself not only for this relationship, but for the future we dream about.
+
+But you have.
+
+You have made me think differently.
+
+You have made me care about things I didn't care about before.
+
+You have made me want to become better.
+
+You have made me think about my future more seriously.
+
+You have made me want to build a better life.
+
+And somewhere along the way, you became a very important part of the person I am becoming.
+
+That's why I don't want to lose you.
+
+I don't want to hurt you because I haven't learned how to handle my emotions.
+
+I don't want our beautiful memories to be overshadowed by my mistakes.
+
+I want to create more memories with you.
+
+More laughter.
+
+More stupid conversations.
+
+More random calls.
+
+More photos.
+
+More moments where we look at each other and smile without even saying anything.
+
+More days where you feel proud that you chose me.
+
+And someday, when we look back at all these difficult moments, I want us to say,
+ </p>
+"We grew through them."
+ </p>
+I don't know whether this  can completely heal the hurt I caused.
+
+Maybe it can't. Maybe words aren't enough.
+
+But I needed you to know that I understand my mistake.
+
+And I understand something even more important—
+
+You.
+ </p>
+Your value.
+ </p>
+Your efforts.
+ </p>
+Your love.
+ </p>
+Your patience.
+ </p>
+Your presence.
+ </p>
+And the place you have in my life.
+
+So please…
+
+Don't think that your efforts go unnoticed.
+
+Don't think that I don't value you.
+
+Don't think that I don't love you.
+
+Sometimes I am just immature at showing it.
+
+And that's something I need to change.
+
+I want to be the person who notices when you're quiet.
+
+The person who listens when you're upset.
+
+The person who gives you time when you need it.
+
+The person who makes you laugh when you're sad.
+
+The person who celebrates your happiness.
+
+The person who stands beside you when things are difficult.
+
+The person who never makes you feel like you're alone while being in a relationship.
+
+And I know…
+
+I have a lot to improve.
+
+But I want to improve.
+
+For us.
+
+For the future I imagine with you.
+
+And for the girl who has already given me so much love.
+
+So this is my request:
+
+Please don't judge my love only by my worst moments.
+
+But also…
+
+Don't trust my promises blindly.
+
+Watch my actions.
+
+Give me the chance to show you.
+
+I will prove to you through my actions
+
+I don't want you to cry because of me.
+
+Tumhe mere liye cry karne ki zarurat nahi hai, baby girl.
+
+Agar kabhi tears hone hi hain…
+
+then let them be mine while I learn from what I did.
+
+Because you deserve smiles.
+
+You deserve love.
+
+You deserve peace.
+
+And you deserve someone who makes you feel like the most important girl in the world.
+
+And I want to become that person for you.
+
+Not perfectly.
+
+But genuinely.
+
+Every single day.
+
+I love you so much, babygirl.
+
+You are my life.
+
+You make my life beautiful.
+
+You changed me.
+
+You made me want a better future.
+
+You take care of me.
+
+You do so many things for me.
+
+You love me.
+
+You support me.
+
+You understand me.
+
+You make ordinary days feel special.
+
+And I genuinely feel blessed to have you in my life.
+
+I don't want to be the reason behind your sadness.
+
+I want to be the reason behind your smile.
+
+I want to be your safe place.
+
+Your person.
+
+Your home.
+
+And whenever life gets difficult, I want you to know that you don't have to fight everything alone.
+
+I am here.
+
+And I want to learn how to be here in the right way.
+
+So…
+ </p>
+I am sorry, Riyuu
+ </p>
+For yesterday.
+ </p>
+For today.
+ </p>
+For every mistake I repeated.
+
+For every time I failed to understand.
+
+For every time I didn't give you enough time.
+
+For every rude tone.
+
+For every moment I made you feel less important than you actually are.
+
+And for every tear that came because of me.
+
+I cannot promise that I will never make another mistake.
+
+But I can promise that I will never stop learning from them.
+
+I can promise that I will keep working on myself.
+
+And I can promise that I will keep choosing you, us, and our future.
+
+Because at the end of everything… It's you, baby girl.
+
+It has always been you.
+ </p>
+And I hope, with time and with my actions, I can make you feel the same love that you have given me.
+ </p>
+I love you so much, Riyuu. ❤️
+ </p>
+Sorry once again bbygirl and agar koi bhi chiz buri lge toh bta dena.
+</p>
+"You are in my heart, you shall be in there forever. My greatest wish is that you are happy when you think of me.
+ I am, when I think of you".
+ </p>
+तुम मेरी मन पसंद किताब का
+ </p>
+ मन पसंद किस्सा है...
+  </p> 
+तुम मेरी ना पसंद जिंदगी का
+ </p>
+ मन पसंद हिसा है....!!!
+  </p>
+
+  ❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️
+  </p>
+  Riya, if a million loved you,
+   </p> 
+I am one of them,
+ </p> 
+      and
+  </p>     
+ if one loved you,
+  </p>
+ it was me,
+  </p> 
+if no one loved you
+ </p>
+     then
+</p>
+ know that I am dead."
+ </p>
+
+            <p>
+                I want to become better.
+                For myself.
+                For us.
+                And for you.❤️❤️❤️❤️
+            </p>
+
+            <div class="signature">
+                 Sorry,
+                  </p>
+                 Forever yours<br>
+                -Ashiii ❤️
+            </div>
+
+        </div>
+
+        <button onclick="nextPage()">
+            One last thing...
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- ==================================================
+     PAGE 12 — FINAL MESSAGE
+================================================== -->
+
+<section class="page">
+
+    <div class="content">
+
+        <div class="final-heart">
+            ❤️
+        </div>
+
+        <div class="eyebrow">
+            If you reached here...
+        </div>
+
+        <h2>
+            Thank you so much bbygirl for reading.
+        </h2>
+
+        <p>
+            RIYUUU, I don't know what you're feeling right now.
+            And I don't want to tell you what you should feel.
+        </p>
+
+        <p
+            class="highlight"
+            style="margin-top:25px">
+
+            I'm genuinely very sorry.
+
+        </p>
+
+        <p style="margin-top:20px">
+
+            I am grateful that you came into my life.
+
+            <br><br>
+
+            And I don't want to prove your place
+            in my life only through words today.
+
+            <br><br>
+
+            I want to prove it through my actions.
+
+            <br><br>
+
+            Not just today.
+
+            <br>
+
+            Every day.
+
+        </p>
+
+        <h2
+            style="margin-top:35px"
+            class="highlight">
+
+            I love you, RIYUUU ❤️❤️❤️❤️.
+
+        </h2>
+
+        <p style="margin-top:20px">
+            — Ashiii
+        </p>
+
+        <button onclick="goToFinalWheel()">
+            Tap here ❤️
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- ==================================================
+     PAGE 13 — FERRIS WHEEL / FINAL MEMORY
+================================================== -->
+
+<section class="page final-wheel-page">
+
+    <div class="content">
+
+        <div class="eyebrow">
+            Our little universe
+        </div>
+
+        <h2>
+            Every memory leads back to you.
+        </h2>
+
+        <p>
+            Stay here for a little while.
+        </p>
+
+        <div class="wheel-scene">
+
+            <div class="wheel-glow"></div>
+
+            <div
+                class="wheel"
+                id="photoWheel">
+
+                <!-- SPOKES -->
+
+                <div
+                    class="spoke"
+                    style="transform:rotate(0deg)">
+                </div>
+
+                <div
+                    class="spoke"
+                    style="transform:rotate(45deg)">
+                </div>
+
+                <div
+                    class="spoke"
+                    style="transform:rotate(90deg)">
+                </div>
+
+                <div
+                    class="spoke"
+                    style="transform:rotate(135deg)">
+                </div>
+
+                <div
+                    class="spoke"
+                    style="transform:rotate(180deg)">
+                </div>
+
+                <div
+                    class="spoke"
+                    style="transform:rotate(225deg)">
+                </div>
+
+                <div
+                    class="spoke"
+                    style="transform:rotate(270deg)">
+                </div>
+
+                <div
+                    class="spoke"
+                    style="transform:rotate(315deg)">
+                </div>
+
+
+                <!-- PHOTO 1 -->
+
+                <div
+                    class="photo-cabin"
+                    style="transform:rotate(0deg)">
+
+                    <div class="photo-cabin-inner">
+
+                        <img src="media/photo1.jpg">
+
+                        <div class="cabin-label">
+                            Memory 01
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PHOTO 2 -->
+
+                <div
+                    class="photo-cabin"
+                    style="transform:rotate(45deg)">
+
+                    <div class="photo-cabin-inner">
+
+                        <img src="media/photo2.jpg">
+
+                        <div class="cabin-label">
+                            Memory 02
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PHOTO 3 -->
+
+                <div
+                    class="photo-cabin"
+                    style="transform:rotate(90deg)">
+
+                    <div class="photo-cabin-inner">
+
+                        <img src="media/photo3.jpg">
+
+                        <div class="cabin-label">
+                            Memory 03
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PHOTO 4 -->
+
+                <div
+                    class="photo-cabin"
+                    style="transform:rotate(135deg)">
+
+                    <div class="photo-cabin-inner">
+
+                        <img src="media/photo4.jpg">
+
+                        <div class="cabin-label">
+                            Memory 04
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PHOTO 5 -->
+
+                <div
+                    class="photo-cabin"
+                    style="transform:rotate(180deg)">
+
+                    <div class="photo-cabin-inner">
+
+                        <img src="media/photo5.jpg">
+
+                        <div class="cabin-label">
+                            Memory 05
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PHOTO 6 -->
+
+                <div
+                    class="photo-cabin"
+                    style="transform:rotate(225deg)">
+
+                    <div class="photo-cabin-inner">
+
+                        <img src="media/photo6.jpg">
+
+                        <div class="cabin-label">
+                            Memory 06
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PHOTO 7 -->
+
+                <div
+                    class="photo-cabin"
+                    style="transform:rotate(270deg)">
+
+                    <div class="photo-cabin-inner">
+
+                        <img src="media/photo7.jpg">
+
+                        <div class="cabin-label">
+                            Memory 07
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PHOTO 8 -->
+
+                <div
+                    class="photo-cabin"
+                    style="transform:rotate(315deg)">
+
+                    <div class="photo-cabin-inner">
+
+                        <img src="media/photo8.jpg">
+
+                        <div class="cabin-label">
+                            Memory 08
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- CENTER -->
+
+                <div class="wheel-center">
+
+                    <div class="heart">
+                        ❤️
+                    </div>
+
+                    <strong>
+                        RIYUUU
+                    </strong>
+
+                    <span>
+                        always you
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <p style="margin-top:10px">
+
+            Some moments become memories.
+            Some memories become a part of us.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+<script>
+
+/* =====================================================
+   PAGE SYSTEM
+===================================================== */
+
+let currentPage = 0;
+
+const pages = document.querySelectorAll(".page");
+
+function updateProgress(){
+
+    const percentage =
+        (currentPage / (pages.length - 1)) * 100;
+
+    document.getElementById("progress").style.width =
+        percentage + "%";
+}
+
+
+function nextPage(){
+
+    if(currentPage >= pages.length - 1){
+        return;
+    }
+
+    pages[currentPage].classList.remove("active");
+
+    currentPage++;
+
+    pages[currentPage].classList.add("active");
+
+    window.scrollTo({
+        top:0,
+        behavior:"smooth"
+    });
+
+    updateProgress();
+
+    emotionalMusicCheck();
+
+    createHearts();
+}
+
+
+/* =====================================================
+   START STORY + MUSIC
+===================================================== */
+
+const music = document.getElementById("bgMusic");
+
+let musicStarted = false;
+
+function startStory(){
+
+    /*
+       Browsers allow audio more reliably because
+       this function is triggered by a user tap.
+    */
+
+    music.volume = 0;
+
+    music.play()
+        .then(() => {
+
+            musicStarted = true;
+
+            fadeMusicTo(
+                0.22,
+                2500
+            );
+
+            document
+                .getElementById("musicButton")
+                .classList.add("playing");
+
+        })
+        .catch(error => {
+
+            console.log(
+                "Music could not autoplay:",
+                error
+            );
+
+        });
+
+    nextPage();
+}
+
+
+/* =====================================================
+   MUSIC FADE SYSTEM
+===================================================== */
+
+function fadeMusicTo(
+    targetVolume,
+    duration = 1500
+){
+
+    if(!musicStarted){
+        return;
+    }
+
+    const startVolume = music.volume;
+
+    const difference =
+        targetVolume - startVolume;
+
+    const startTime = performance.now();
+
+    function animateVolume(now){
+
+        const elapsed =
+            now - startTime;
+
+        const progress =
+            Math.min(elapsed / duration,1);
+
+        /*
+           Smooth easing
+        */
+
+        const eased =
+            progress < .5
+            ? 2 * progress * progress
+            : 1 - Math.pow(-2 * progress + 2,2) / 2;
+
+        music.volume =
+            startVolume + difference * eased;
+
+        if(progress < 1){
+
+            requestAnimationFrame(
+                animateVolume
+            );
+
+        }
+
+    }
+
+    requestAnimationFrame(
+        animateVolume
+    );
+}
+
+
+/* =====================================================
+   EMOTIONAL SECTION MUSIC
+===================================================== */
+
+function emotionalMusicCheck(){
+
+    /*
+       Page numbers:
+
+       0 = Opening
+       1 = Envelope
+       2 = Memories
+       3 = Videos
+       4 = What happened
+       5 = Forgiveness
+       6 = Continue talking
+       7 = Promise
+       8 = Boyfriend Day
+       9 = Effort
+       10 = Letter
+       11 = Final message
+       12 = Ferris wheel
+    */
+
+    const emotionalPages = [
+        4,
+        5,
+        6,
+        7,
+        9,
+        10,
+        11,
+        12
+    ];
+
+    if(
+        emotionalPages.includes(currentPage)
+    ){
+
+        /*
+           Lower volume for emotional writing.
+        */
+
+        fadeMusicTo(
+            0.12,
+            1800
+        );
+
+        document
+            .getElementById("emotionalVignette")
+            .classList.add("active");
+
+    }else{
+
+        fadeMusicTo(
+            0.22,
+            1800
+        );
+
+        document
+            .getElementById("emotionalVignette")
+            .classList.remove("active");
+
+    }
+}
+
+
+/* =====================================================
+   MUSIC ON/OFF
+===================================================== */
+
+function toggleMusic(){
+
+    const button =
+        document.getElementById("musicButton");
+
+    if(
+        music.paused
+    ){
+
+        music.play()
+            .then(() => {
+
+                musicStarted = true;
+
+                fadeMusicTo(
+                    0.18,
+                    1200
+                );
+
+                button.classList.add("playing");
+
+            });
+
+    }else{
+
+        fadeMusicTo(
+            0,
+            700
+        );
+
+        setTimeout(() => {
+
+            music.pause();
+
+        },700);
+
+        button.classList.remove("playing");
+    }
+}
+
+
+/* =====================================================
+   ENVELOPE
+===================================================== */
+
+let envelopeOpened = false;
+
+function openEnvelope(){
+
+    const envelope =
+        document.getElementById("envelope");
+
+    const button =
+        document.getElementById("envelopeButton");
+
+    if(!envelopeOpened){
+
+        envelope.classList.add("open");
+
+        envelopeOpened = true;
+
+        button.innerText =
+            "Continue with me ❤️";
+
+    }else{
+
+        nextPage();
+
+    }
+
+}
+
+
+/* =====================================================
+   QUESTION ANSWERS
+===================================================== */
+
+function answer(text){
+
+    document.getElementById("response").innerText =
+        text;
+
+    createHearts();
+
+}
+
+
+function answer2(text){
+
+    document.getElementById("response2").innerText =
+        text;
+
+    createHearts();
+
+}
+
+
+/* =====================================================
+   FLOATING HEARTS
+===================================================== */
+
+function createHearts(){
+
+    const symbols = [
+        "❤️",
+        "💗",
+        "💕",
+        "✨",
+        "🌷",
+        "💫"
+    ];
+
+    for(let i = 0; i < 8; i++){
+
+        const heart =
+            document.createElement("div");
+
+        heart.className =
+            "floating-heart";
+
+        heart.innerText =
+            symbols[
+                Math.floor(
+                    Math.random() *
+                    symbols.length
+                )
+            ];
+
+        heart.style.left =
+            Math.random() * 100 + "%";
+
+        heart.style.animationDuration =
+            (4 + Math.random() * 3) + "s";
+
+        heart.style.fontSize =
+            (15 + Math.random() * 15) + "px";
+
+        document.body.appendChild(
+            heart
+        );
+
+        setTimeout(() => {
+
+            heart.remove();
+
+        },7000);
+
+    }
+
+}
+
+
+/* =====================================================
+   STARS
+===================================================== */
+
+const starContainer =
+    document.getElementById("stars");
+
+for(let i = 0; i < 90; i++){
+
+    const star =
+        document.createElement("div");
+
+    star.className =
+        "star";
+
+    star.style.left =
+        Math.random() * 100 + "%";
+
+    star.style.top =
+        Math.random() * 100 + "%";
+
+    star.style.animationDelay =
+        Math.random() * 3 + "s";
+
+    starContainer.appendChild(
+        star
+    );
+
+}
+
+
+/* =====================================================
+   FINAL FERRIS WHEEL
+===================================================== */
+
+function goToFinalWheel(){
+
+    pages[currentPage].classList.remove("active");
+
+    currentPage =
+        pages.length - 1;
+
+    pages[currentPage].classList.add("active");
+
+    window.scrollTo({
+        top:0,
+        behavior:"smooth"
+    });
+
+    updateProgress();
+
+    emotionalMusicCheck();
+
+    createHearts();
+
+}
+
+
+/* =====================================================
+   SYNCHRONIZED LYRICS
+===================================================== */
+
+/*
+   IMPORTANT:
+
+   Put the exact timestamps from YOUR music file below.
+
+   Example:
+
+   {
+       time: 15.2,
+       duration: 4.5,
+       text: "I am so in love with you"
+   }
+
+   means the lyric appears at 15.2 seconds
+   and stays for 4.5 seconds.
+
+   Replace the example times after listening
+   to your exact song recording.
+*/
+
+const lyrics = [
+
+    {
+        time: 15.2,
+        duration: 4.5,
+        text: "I am so in love with you"
+    },
+
+    {
+        time: 30.0,
+        duration: 5.0,
+        text: "I cannot take a moment away from you"
+    }
+
+];
+
+
+/* =====================================================
+   LYRIC ENGINE
+===================================================== */
+
+let currentLyricIndex = -1;
+
+const lyricElement =
+    document.getElementById("lyric");
+
+function updateLyrics(){
+
+    if(!musicStarted){
+        return;
+    }
+
+    const currentTime =
+        music.currentTime;
+
+    let foundIndex = -1;
+
+    for(
+        let i = 0;
+        i < lyrics.length;
+        i++
+    ){
+
+        const lyric =
+            lyrics[i];
+
+        if(
+            currentTime >= lyric.time &&
+            currentTime <=
+                lyric.time + lyric.duration
+        ){
+
+            foundIndex = i;
+            break;
+
+        }
+
+    }
+
+
+    /*
+       New lyric
+    */
+
+    if(
+        foundIndex !== currentLyricIndex
+    ){
+
+        currentLyricIndex =
+            foundIndex;
+
+        if(foundIndex === -1){
+
+            lyricElement.classList.remove(
+                "visible"
+            );
+
+        }else{
+
+            lyricElement.innerText =
+                lyrics[foundIndex].text;
+
+            /*
+               Small delay creates
+               a beautiful fade-in.
+            */
+
+            requestAnimationFrame(() => {
+
+                lyricElement.classList.add(
+                    "visible"
+                );
+
+            });
+
+        }
+
+    }
+
+}
+
+
+/*
+   Listen continuously to the song.
+*/
+
+music.addEventListener(
+    "timeupdate",
+    updateLyrics
+);
+
+
+/* =====================================================
+   FINAL WHEEL SPECIAL BEHAVIOUR
+===================================================== */
+
+music.addEventListener(
+    "timeupdate",
+    () => {
+
+        /*
+           The lyrics are shown only when
+           their timestamps are active.
+
+           Therefore nothing remains permanently
+           written on the final page.
+        */
+
+        updateLyrics();
+
+    }
+);
+
+
+/* =====================================================
+   INITIAL STATE
+===================================================== */
+
+updateProgress();
+
+</script>
+
+</body>
+</html>
